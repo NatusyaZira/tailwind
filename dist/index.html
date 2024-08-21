@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html x-data="{ dark: true }" lang="en" :class="dark ? 'dark' : '' ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     <div class="container min-h-screen px-6 py-8 mx-auto bg-gray-100 dark:bg-gray-900" >
         <! - page header / headings ->
         <section id="header">
+          <button @click="dark = !dark" class="bg-gray-300 rounded">Toggle Dark Mode</button>
           <div class="text-center">
             <h1 class="leading-snug ">Tom Gonzales home training <br>
               <span class="text-4xl italic text-indigo-900 sm:text-5xl lg:text-7xl opacity-80 dark:text-indigo-200">
